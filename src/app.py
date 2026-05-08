@@ -1,9 +1,20 @@
-import streamlit as st
+import os
 import string
 import pickle
+import streamlit as st
 
-model = pickle.load(open("model/model.pkl","rb"))
-vectorizer = pickle.load(open("model/vectorizer.pkl","rb"))
+st.title("🧠 Smart News Classifier")
+st.write("App is loading...")
+
+BASE_DIR = os.path.dirname(__file__)
+
+model_path = os.path.join(BASE_DIR, "model/model.pkl")
+vectorizer_path = os.path.join(BASE_DIR, "model/vectorizer.pkl")
+try:
+    model = pickle.load(open(model_path, "rb"))
+    vectorizer = pickle.load(open(vectorizer_path, "rb"))
+except Exception as e:
+    st.error(f"Error: {e}")
 
 label_map = {
     1: "World",
