@@ -4,8 +4,6 @@ import pickle
 import streamlit as st
 
 st.set_page_config(page_title="Smart News Classifier")
-st.title("🧠 Smart News Classifier")
-st.write("App is loading...")
 
 label_map = {
     1: "World",
