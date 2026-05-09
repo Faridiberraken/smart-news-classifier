@@ -5,7 +5,8 @@ An AI-powered web app that automatically classifies news articles into categorie
 ---
 
 ## 🚀 Demo
-
+You can test the app here:
+https://smart-news-classifier-mhs8tekqtapckihpn5avtp.streamlit.app/
 👉 Paste a news headline or article and instantly get:
 
 * 📂 Predicted category
